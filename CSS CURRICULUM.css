@@ -1,0 +1,69 @@
+
+
+
+body{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Permite que los elementos se ubiquen uno debajo de otro */
+    justify-content: center;
+    align-items: center;
+    background-image: url('Fight\ Shut\ Up\ GIF\ by\ Golden\ Wolf\ -\ Find\ &\ Share\ on\ GIPHY.gif'); /* Cambia por la URL de tu imagen */
+    background-size:cover
+}
+
+
+
+.contenedor {
+    width: 100%;
+    height: 100vh;            /* Ocupa toda la altura de la ventana visible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Centra el contenido verticalmente */
+    align-items: center;      /* Centra el contenido horizontalmente */
+    color: white;             /* Establece el color del texto en blanco */
+    text-align: center;       /* Centra el texto dentro del contenedor */
+    opacity: 0.7;
+}
+
+/* Estilos del div cuadrado */
+.cuadrado {
+    width: 600px;
+    height: 600px;
+    background-color: #313131;
+    display: flex;
+    flex-direction: column; /* Permite que los elementos se ubiquen uno debajo de otro */
+    justify-content: center;
+    align-items: center;
+    border: #7e817e;
+    border-radius: 600px;
+}
+
+/* Contenedor de la barra de carga */
+.barra-contenedor {
+    width: 100%;
+    max-width: 500px; /* Controla el tamaño máximo de la barra */
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px; /* Espaciado entre elementos */
+}
+
+/* La barra de carga */
+.barra-carga {
+    height: 100%;
+    width: 0; /* Empezamos en 0 y animamos hasta el 100% */
+    background-color: #6f776f;
+    animation: carga 3s ease-in-out forwards;
+}
+
+/* Animación de la barra de carga */
+@keyframes carga {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}

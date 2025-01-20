@@ -1,0 +1,260 @@
+<html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #c7c7c7, #ffffff);
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-out;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #000000, #888888);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            animation: fadeIn 2s ease;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+            animation: fadeIn 2s ease 0.5s;
+        }
+
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            animation: slideUp 1s ease;
+        }
+
+        .section h2 {
+            color: #272727;
+            margin-bottom: 10px;
+        }
+
+        /* Skill Bars */
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-label {
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            background: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-bar-fill {
+            height: 20px;
+            background: linear-gradient(135deg, #848486, #d6adda);
+            width: 0;
+            transition: width 1.5s ease-out;
+        }
+
+        /* Skill Chips */
+        .chip-list {
+            margin: 20px 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .chip {
+            display: inline-block;
+            background: #2e2e2e;
+            color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .chip:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Luis Manuel Arjona Gironés</h1>
+            <p>Profesión | Email: Luismanuelarjonagirones@gmail.com | Teléfono: +34 722 69 28 61</p>
+        </div>
+
+        <div class="section">
+            <h2>Perfil</h2>
+            <p>Soy un estudiante con buena base y con practicas pero busco una buena empresa para tener una mejor base</p>
+        </div>
+
+        <div class="section">
+            <h2>Experiencia</h2>
+            <ul>
+                <li>
+                    <strong>Ayudante</strong> - Ayuntamiento de Gojar (15/3/2022 - 18/6/2022)
+                    <p>Gracias a estas practicas se como realizar tareas administrativas sencillas tales como realizar certificados digitales y manejar programas varios de ofimatica a un nivel medio/superior</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Educación</h2>
+            <ul>
+                <li>
+                    <strong>Grado FPB informatica</strong> - Alba longa (2020 - 2022)
+                </li>
+                <li>
+                    <strong>Grado medio FP Informatica</strong> - Atlantida cidep (2022 - 2024)
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Habilidades</h2>
+            <!-- Skill Bars -->
+            <ul class="skills-list">
+                <li class="skill-item">
+                    <div class="skill-label">HTML & CSS</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 90%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">JavaScript</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 75%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">React</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 65%;"></div>
+                    </div>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-label">Python</div>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" style="width: 80%;"></div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Skill Chips -->
+            <ul class="chip-list">
+                <li class="chip">HTML</li>
+                <li class="chip">CSS</li>
+                <li class="chip">JavaScript</li>
+                <li class="chip">React</li>
+                <li class="chip">Python</li>
+                <li class="chip">Git</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Activate skill bars' animations on load
+        window.addEventListener('load', () => {
+            const bars = document.querySelectorAll('.skill-bar-fill');
+            bars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500); // Delay start
+            });
+        });
+        
+    </script>
+</body>
+</html>
